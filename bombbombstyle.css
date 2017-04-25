@@ -12,38 +12,21 @@ nav > ul > li > a {
     padding: 1.0em 1.5em;
     text-decoration: none;
 }
+nav > ul > li > input{
+    display: block;
+    background-color: #87E279; 
+    top: 15px;
+    left: 10px;
+    bottom: 10px;
+  padding: 0.5em 1.5em;
+}
 nav > ul > li > #star {
     display: block;
     position : relative ;
+    background-color: transparent;
     top: 15px;
     left: 10px;
     padding: 0.5em 1.5em;
-}
-nav > ul > li > #randomize {
-    display: block;
-    background-color: #87E279; 
-    top: 15px;
-    left: 10px;
-    bottom: 10px;
-  padding: 0.5em 1.5em;
-}
-nav > ul > li > #add {
-    background-color: #87E279; 
-    display: block;
-    background-blend-mode: 0;
-    top: 15px;
-    left: 10px;
-    bottom: 10px;
-  padding: 0.5em 1.5em;
-}
-nav > ul > li > #showAll {
-    background-color: #87E279; 
-    display: block;
-    background-blend-mode: 0;
-    top: 15px;
-    left: 10px;
-    bottom: 10px;
-  	padding: 0.5em 1.5em;
 }
 #siteHeader{
 	position: absolute; 

@@ -1,4 +1,4 @@
- var itemRectangles = [];
+ var displayHeatmap = true;
  window.onload = function() {
     // create a heatmap instance
     var heatmap = h337.create({
@@ -22,17 +22,28 @@
     };
     //Initial click briefly removes heatmap canvas, second copy click hits underlying elements
     heatmapContainer.onclick = function (e) {
+        console.log("heatmap working...");
         hideHeatmap();
         document.elementFromPoint(e.layerX, e.layerY).click();
         showHeatmap();   
+        if(!displayHeatmap){ hideHeatmap();}
       };
       heatmap.repaint();
   };
+function toggleHeatmap(){
+  if(displayHeatmap){
+    displayHeatmap =false;
+  }
+  else{
+    showHeatmap();
+    displayHeatmap = true;
+  }
+};
 function showHeatmap(){
    document.getElementById('heatmapContainerWrapper').style.display = 'block';
     document.getElementById('heatmapContainer').style.display = 'block';
-}
+};
 function hideHeatmap(){
    document.getElementById('heatmapContainerWrapper').style.display = 'none';
     document.getElementById('heatmapContainer').style.display = 'none';
-}
+};
