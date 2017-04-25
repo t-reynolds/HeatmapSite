@@ -1,6 +1,8 @@
  var displayHeatmap = true;
  window.onload = function() {
     // create a heatmap instance
+    randomURL(); //Methond inside videoPlayerFunctions.js to randomize the video loaded upon page refresh, 
+                  //poor placement but I was unable to figure out a better, cleaner alternative
     var heatmap = h337.create({
       container: document.getElementById('heatmapContainer'),
       maxOpacity: .6,
