@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="bombbombstyle.css">
+     
+
+    <title>Mousemove example (with backgroundColor) | heatmap.js</title>
+  </head>
+  <body>
+   <div id="heatmapContainerWrapper">
+      <div id="heatmapContainer">
+        </div>
+    </div>
+   <nav>
+        <ul>
+            <li><input id="randomize" type="button" value="Randomize!" onclick="randomURL();" /></li>
+            <li><input id= "star" type='image' src="./img_lib/nav_icons/star_icon.png" onclick= "randomURL()"></li>
+            <li><input id= "add" type='button' value = "Add Video" onclick= "addURL()"></li>
+             <li><input id= "showAll" type='button' value = "Toggle Video Grid" onclick= "toggleGrid()"></li>
+
+        </ul>
+    </nav>
+   
+      <div id = "header">
+      <img id = 'leftIcon' src="./img_lib/header_icons/videocamera.png";>
+      <h id = 'siteHeader'> Your Video Website </h>
+      <img id = 'rightIcon' src="./img_lib/header_icons/videocameraflipped.png";>
+      </div>
+      
+       <input id= "playVideo" type='image' src="./img_lib/iframe_icons/play.png" onclick= "playVideo()">
+        <input id= "pauseVideo" type='image' src="./img_lib/iframe_icons/pause.png" onclick= "pauseVideo()">
+         <input id= "skipForward" type='image' src="./img_lib/iframe_icons/skip_forward.png" onclick= "skipForward()">
+        <input id= "skipBackward" type='image' src="./img_lib/iframe_icons/skip_backward.png" onclick= "skipBackward()">
+         <input id= "restart" type='image' src="./img_lib/iframe_icons/restart.png" onclick= "restartVideo()">
+
+       <div id = "ytPlayer" ></div>
+       
+       <ul id = 'grid'>
+        </ul>
+        <script src="./build/heatmap.js"></script>
+        <script src = "./build/videoPlayerFunctions.js"></script>
+        <!-- Not sure why the randomURL(); function is not being called here
+              I am trying to make the video randomize every single reload of the page
+              but window.onload func inside the heatmapFunctions.js seems to interfere. -->
+        <script src = "text/javascript">randomURL();</script>
+        <script src = "./build/heatmapFunctions.js"></script>
+        <script src = "./build/videoGrid.js:"></script>
+        <script type="text/javascript">
+            randomURL();
+            console.log("does this get called...");
+              </script>
+  </body>
+</html>

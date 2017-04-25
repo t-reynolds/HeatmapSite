@@ -1,0 +1,137 @@
+nav { background-color: #333; margin:0; font-size: 15px; }
+nav ul{margin:0; padding: 30;}
+nav ul li{
+	display: inline-block;
+	list-style-type: none;
+}
+nav > ul > li > a {
+    color: #333;
+    background-color:#0A7EBC;
+    display: block;
+    line-height: 2em;
+    padding: 1.0em 1.5em;
+    text-decoration: none;
+}
+nav > ul > li > #star {
+    display: block;
+    position : relative ;
+    top: 15px;
+    left: 10px;
+    padding: 0.5em 1.5em;
+}
+nav > ul > li > #randomize {
+    display: block;
+    background-color: #87E279; 
+    top: 15px;
+    left: 10px;
+    bottom: 10px;
+  padding: 0.5em 1.5em;
+}
+nav > ul > li > #add {
+    background-color: #87E279; 
+    display: block;
+    background-blend-mode: 0;
+    top: 15px;
+    left: 10px;
+    bottom: 10px;
+  padding: 0.5em 1.5em;
+}
+nav > ul > li > #showAll {
+    background-color: #87E279; 
+    display: block;
+    background-blend-mode: 0;
+    top: 15px;
+    left: 10px;
+    bottom: 10px;
+  	padding: 0.5em 1.5em;
+}
+#siteHeader{
+	position: absolute; 
+	margin: auto; 
+	top: 120px; 
+	left: 680px; 
+	transform: translate(-50%, -50%);
+	font-size: 30px;
+	border : 2px solid black;
+	background-color: #A8D8F0;
+}
+#header > #leftIcon{
+	position: absolute;
+	margin: auto; 
+	top: 100px; 
+	left: 820px; 
+}
+#header > #rightIcon{
+	position: absolute;
+	top: 100px; 
+	left: 505px; 
+}
+#playVideo{
+	position : absolute;
+	top: 536px;
+	left:432px;
+	z-index: 9001;
+	background-color: #D7C8CA;
+	display: 'none';
+}
+#pauseVideo{
+	position : absolute;
+	top: 536px;
+	left: 432px;
+	z-index: 9001;
+	background-color: #D7C8CA;
+}
+#skipBackward{
+	position : absolute;
+	top: 536px;
+	left: 396px;
+	z-index: 9001;
+	background-color: #D7C8CA;
+}
+#skipForward{
+	position : absolute;
+	top: 536px;
+	left: 468px;
+	z-index: 9001;
+	background-color: #D7C8CA;
+}
+#restart{
+	position : absolute;
+	top: 536px;
+	left: 360px;
+	z-index: 9001;
+	background-color: #D7C8CA;
+}
+#ytPlayer{
+	position: absolute; 
+	margin: auto; 
+	top: 340px; 
+	left: 680px; 
+	transform: translate(-50%, -50%); 
+	border : solid;
+	border-color: #AA00FF;
+	/*border*/
+	z-index: 9000;
+}
+#grid{
+	display : grid;
+	left: 10px;
+	grid-template-columns: 98px 98px 98px;
+	grid-template-rows: 80px 80px 80px; 
+	grid-column-gap: 6px;
+	grid-row-gap: 15px;
+}
+#grid > iframe{
+	position : relative;
+	left : 10px;
+}
+
+body, html { margin:0; padding:0; height:100%; background-image: url(./img_lib/background/carina.jpg); }
+
+      body { font-family:sans-serif; }
+      body * { font-weight:200;}
+      #heatmapContainerWrapper { width:100%; height:100%; position:absolute; z-index: 11000; overflow: visible;}
+      #heatmapContainer { width:100%; height:100%; z-index: 11000; overflow: visible;}
+      h1 { position:absolute; background:black; color:white; padding:10px; font-weight:200; z-index:10000;}
+/*      #all-examples-info { position:relative; background:white; font-size:16px; padding:20px; top:100px; width:350px; line-height:150%; border:1px solid rgba(0,0,0,.2);}
+*/     
