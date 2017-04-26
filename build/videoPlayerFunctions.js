@@ -32,7 +32,7 @@ function paused(){
 	document.getElementById("playVideo").style.display = "block";
 }
 function playVideo(){
-	isPlayer = true;
+	isPlaying = true;
 	player.playVideo();
 	playing();
 }
