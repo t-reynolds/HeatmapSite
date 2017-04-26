@@ -1,8 +1,7 @@
  var displayHeatmap = true;
  window.onload = function() {
     // create a heatmap instance
-    randomURL(); //Methond inside videoPlayerFunctions.js to randomize the video loaded upon page refresh, 
-                  //poor placement but I was unable to figure out a better, cleaner alternative
+
     var heatmap = h337.create({
       container: document.getElementById('heatmapContainer'),
       maxOpacity: .6,
@@ -22,6 +21,9 @@
       //Generates canvas information
       heatmap.addData({ x: x, y: y, value: 2 });
     };
+     randomURL(); //Methond inside videoPlayerFunctions.js to randomize the video loaded upon page refresh, 
+                  //poor placement but I was unable to figure out a better, cleaner alternative
+                  
     //Initial click briefly removes heatmap canvas, second copy click hits underlying elements
     heatmapContainer.onclick = function (e) {
         console.log("heatmap working...");
@@ -30,6 +32,7 @@
         showHeatmap();   
         if(!displayHeatmap){ hideHeatmap();}
       };
+
       heatmap.repaint();
   };
 function toggleHeatmap(){

@@ -29,7 +29,9 @@ function addURL(){
 	var valid_url = url.replace("watch?v=", "embed/");
 	if(!urls.includes(valid_url) && isValidURL(url)){
 		urls.push(valid_url);
-		generateGridItem(valid_url);
+		if(gridExusts){
+			generateGridItem(valid_url);
+		}
 	}
 	else if(urls.includes(valid_url)){
 		alert("That URL already exists!");
