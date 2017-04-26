@@ -1,5 +1,6 @@
 //tag script contains YouTube API functions
 var player;
+var isPlaying = false;
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/iframe_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
@@ -31,28 +32,36 @@ function paused(){
 	document.getElementById("playVideo").style.display = "block";
 }
 function playVideo(){
+	isPlayer = true;
 	player.playVideo();
 	playing();
 }
 function pauseVideo(){
+	isPlaying = false;
 	player.pauseVideo()
 	paused();
 }
 function skipBackward() {
     var currentTime = player.getCurrentTime();
     player.seekTo(currentTime - 10, true);
-    playVideo();
+    if(isPlaying){
+    	playVideo();
+    }
 }
 
 function skipForward() {
     var currentTime = player.getCurrentTime();
     player.seekTo(currentTime + 10, true);
-    playVideo();  
+    if(isPlaying){
+    	playVideo();
+    }  
 }
 
 function restartVideo() {
 	player.stopVideo();
-	playVideo();
+	if(isPlaying){
+    	playVideo();
+    }
 }
 
 function onPlayerStateChange(event) {
